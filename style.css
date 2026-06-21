@@ -1,0 +1,664 @@
+/* ============================================
+   RAINFOREST WATERSHED - RETRO GEOCITIES THEME
+   ============================================ */
+
+:root {
+    --primary-green: #006400;
+    --secondary-green: #228B22;
+    --light-green: #90EE90;
+    --accent-brown: #8B4513;
+    --water-blue: #20B2AA;
+    --sky-blue: #4682B4;
+    --mist-white: #F5F5F5;
+    --cream: #FFFACD;
+    --text-dark: #1a1a1a;
+    --border-color: #556B2F;
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, #E0FFFF 0%, #F0FFF0 50%, #FFFACD 100%);
+    background-attachment: fixed;
+    color: var(--text-dark);
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Retro border effect */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 10px solid;
+    border-color: var(--primary-green) var(--water-blue) var(--accent-brown) var(--secondary-green);
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+
+.retro-header {
+    background: linear-gradient(180deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+    color: var(--mist-white);
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-bottom: 5px solid var(--accent-brown);
+    animation: slideDown 0.8s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.header-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 3em;
+    margin-bottom: 10px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.retro-header h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 3em;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.tagline {
+    font-size: 1.2em;
+    font-style: italic;
+    color: var(--mist-white);
+    opacity: 0.95;
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+
+.retro-nav {
+    background: linear-gradient(90deg, var(--accent-brown) 0%, var(--primary-green) 50%, var(--water-blue) 100%);
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-bottom: 3px solid var(--border-color);
+}
+
+.nav-link {
+    color: var(--mist-white);
+    text-decoration: none;
+    padding: 12px 20px;
+    font-weight: bold;
+    border-right: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    font-size: 0.95em;
+}
+
+.nav-link:last-child {
+    border-right: none;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.hero-section {
+    background: linear-gradient(135deg, var(--sky-blue) 0%, var(--water-blue) 100%),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><defs><pattern id="water" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M0,50 Q25,30 50,50 T100,50" fill="none" stroke="%23ffffff" stroke-width="2" opacity="0.1"/></pattern></defs><rect width="1200" height="400" fill="url(%23water)"/></svg>');
+    color: var(--mist-white);
+    padding: 80px 20px;
+    text-align: center;
+    box-shadow: inset 0 -5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '🌧️';
+    position: absolute;
+    font-size: 2em;
+    opacity: 0.1;
+    animation: rain 3s linear infinite;
+}
+
+@keyframes rain {
+    from {
+        top: -50px;
+        opacity: 0;
+    }
+    to {
+        top: 100%;
+        opacity: 0;
+    }
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h2 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.hero-content p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+    color: var(--mist-white);
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    border: 3px solid var(--accent-brown);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.cta-button:hover {
+    background: linear-gradient(135deg, var(--secondary-green), var(--primary-green));
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* ============================================
+   MAIN CONTAINER & LAYOUT
+   ============================================ */
+
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================
+   CONTENT SECTIONS
+   ============================================ */
+
+.content-section {
+    background: linear-gradient(135deg, var(--mist-white) 0%, var(--cream) 100%);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-left: 8px solid var(--secondary-green);
+    margin-bottom: 30px;
+    animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.alt-section {
+    background: linear-gradient(135deg, #E8F5E9 0%, #F1F8E9 100%);
+    border-left-color: var(--primary-green);
+}
+
+.content-section h2 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 2em;
+    color: var(--primary-green);
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.content-section p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.feature-list li {
+    padding: 12px 0;
+    padding-left: 30px;
+    font-size: 1.05em;
+    font-weight: 500;
+    color: var(--text-dark);
+    background: rgba(34, 139, 34, 0.05);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding-left: 15px;
+    transition: all 0.3s ease;
+}
+
+.feature-list li:hover {
+    background: rgba(34, 139, 34, 0.1);
+    transform: translateX(5px);
+}
+
+/* ============================================
+   SPECIES GRID
+   ============================================ */
+
+.species-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.species-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    border: 3px solid var(--water-blue);
+    transition: all 0.3s ease;
+}
+
+.species-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-color: var(--secondary-green);
+}
+
+.species-icon {
+    font-size: 3em;
+    margin-bottom: 15px;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.species-card h3 {
+    color: var(--primary-green);
+    margin-bottom: 10px;
+    font-family: 'Fredoka One', cursive;
+}
+
+.species-card p {
+    font-size: 0.95em;
+    color: #666;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* ============================================
+   PROJECT LIST
+   ============================================ */
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project-item {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid var(--accent-brown);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.project-item:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateX(5px);
+}
+
+.project-item h3 {
+    color: var(--primary-green);
+    margin-bottom: 10px;
+}
+
+.project-item p {
+    color: #555;
+    font-size: 0.95em;
+    margin-bottom: 10px;
+}
+
+.progress {
+    background: linear-gradient(90deg, var(--light-green) 0%, var(--light-green) 65%, #ddd 65%);
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: var(--primary-green);
+    font-size: 0.9em;
+}
+
+/* ============================================
+   INVOLVEMENT OPTIONS
+   ============================================ */
+
+.involvement-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.option-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid var(--water-blue);
+    transition: all 0.3s ease;
+}
+
+.option-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.option-card h3 {
+    color: var(--primary-green);
+    font-family: 'Fredoka One', cursive;
+    margin-bottom: 12px;
+    font-size: 1.3em;
+}
+
+.option-card p {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 0.95em;
+}
+
+.action-button {
+    background: linear-gradient(135deg, var(--water-blue), var(--sky-blue));
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.action-button:hover {
+    background: linear-gradient(135deg, var(--sky-blue), var(--water-blue));
+    transform: scale(1.1);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   SIDEBAR
+   ============================================ */
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-widget {
+    background: linear-gradient(135deg, var(--cream) 0%, #FFFACD 100%);
+    padding: 20px;
+    border-radius: 8px;
+    border: 3px dashed var(--border-color);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-widget h3 {
+    color: var(--primary-green);
+    margin-bottom: 12px;
+    font-family: 'Fredoka One', cursive;
+    text-align: center;
+}
+
+.quick-facts ul {
+    list-style: none;
+}
+
+.quick-facts li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0, 100, 0, 0.2);
+    font-size: 0.9em;
+}
+
+.quick-facts li:last-child {
+    border-bottom: none;
+}
+
+.sidebar-widget p {
+    font-size: 0.9em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.retro-footer {
+    background: linear-gradient(180deg, var(--accent-brown) 0%, #5C4033 100%);
+    color: var(--mist-white);
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+    border-top: 5px solid var(--border-color);
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.retro-footer p {
+    margin-bottom: 10px;
+    font-size: 0.95em;
+}
+
+.footer-text {
+    font-size: 0.85em;
+    opacity: 0.9;
+}
+
+small {
+    display: block;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+.footer-badges {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* ============================================
+   FLOATING LEAF ANIMATION
+   ============================================ */
+
+.floating-leaf {
+    position: fixed;
+    bottom: -50px;
+    right: 20px;
+    font-size: 2em;
+    animation: float-up 8s ease-in infinite;
+    z-index: 100;
+    opacity: 0.7;
+}
+
+@keyframes float-up {
+    0% {
+        bottom: -50px;
+        opacity: 0;
+        transform: translateX(0) rotate(0deg);
+    }
+    10% {
+        opacity: 0.7;
+    }
+    90% {
+        opacity: 0.7;
+    }
+    100% {
+        bottom: 100vh;
+        opacity: 0;
+        transform: translateX(100px) rotate(360deg);
+    }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+    .retro-header h1 {
+        font-size: 2em;
+    }
+
+    .logo {
+        font-size: 2em;
+    }
+
+    .hero-content h2 {
+        font-size: 1.8em;
+    }
+
+    .nav-link {
+        padding: 10px 12px;
+        font-size: 0.8em;
+    }
+
+    .content-section {
+        padding: 20px;
+    }
+
+    .content-section h2 {
+        font-size: 1.5em;
+    }
+
+    .species-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    body::before {
+        border-width: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .retro-header h1 {
+        font-size: 1.5em;
+    }
+
+    .hero-content h2 {
+        font-size: 1.3em;
+    }
+
+    .nav-link {
+        padding: 8px 8px;
+        font-size: 0.7em;
+    }
+
+    .species-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .involvement-options {
+        grid-template-columns: 1fr;
+    }
+
+    body::before {
+        border-width: 3px;
+    }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+    body::before {
+        display: none;
+    }
+
+    .floating-leaf {
+        display: none;
+    }
+}
