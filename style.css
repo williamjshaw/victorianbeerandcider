@@ -67,7 +67,7 @@ body {
 }
 
 .sidebar a {
-    color: #0000ff;
+    color: #528E61;
     text-decoration: underline;
     font-size: 13px;
 }
@@ -96,7 +96,7 @@ body {
 }
 
 .table-header {
-    background-color: #0000ff;
+    background-color: #528E61;
     color: #ffffff;
     font-weight: bold;
 }
@@ -123,7 +123,7 @@ textarea {
 
 input[type="submit"],
 input[type="reset"] {
-    background-color: #0000ff;
+    background-color: #528E61;
     color: #ffffff;
     padding: 5px 15px;
     border: 1px outset #cccccc;
@@ -146,7 +146,7 @@ input[type="reset"]:active {
 }
 
 .footer a {
-    color: #ffff00;
+    color: #528E61;
     text-decoration: underline;
 }
 
@@ -156,7 +156,7 @@ input[type="reset"]:active {
 
 /* Links */
 a {
-    color: #0000ff;
+    color: #528E61;
     text-decoration: underline;
 }
 
