@@ -11,7 +11,7 @@ body {
 
 /* Header */
 .header {
-    background-color: #000080;
+    background-color: #528E61;
     color: #ffffff;
     padding: 20px;
     text-align: center;
@@ -35,9 +35,9 @@ body {
 }
 
 .content h2 {
-    color: #000080;
+    color: #528E61;
     font-size: 18px;
-    border-bottom: 2px solid #000080;
+    border-bottom: 2px solid #528E61;
     padding-bottom: 5px;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -62,7 +62,7 @@ body {
 
 .sidebar-header {
     background-color: #ffff99;
-    color: #000080;
+    color: #528E61;
     font-weight: bold;
 }
 
@@ -139,7 +139,7 @@ input[type="reset"]:active {
 
 /* Footer */
 .footer {
-    background-color: #000080;
+    background-color: #528E61;
     color: #ffffff;
     text-align: center;
     font-size: 12px;
