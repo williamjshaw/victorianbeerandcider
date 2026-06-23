@@ -105,6 +105,18 @@ body {
     background-color: #f0f0f0;
 }
 
+/* Image Cell Styling */
+.image-cell {
+    text-align: center;
+    padding: 8px;
+}
+
+.entry-image {
+    max-width: 80px;
+    max-height: 80px;
+    border: 1px solid #cccccc;
+}
+
 /* Form */
 form {
     background-color: #ffffff;
