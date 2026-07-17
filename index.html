@@ -27,9 +27,6 @@
                     <td><b>Navigation</b></td>
                 </tr>
                 <tr>
-                    <td><a href="#reviews">Beer Reviews</a></td>
-                </tr>
-                <tr>
                     <td><a href="#cider">Cider Reviews</a></td>
                 </tr>
                 <tr>
@@ -51,23 +48,6 @@
         </td>
 
         <td width="80%" valign="top" class="content">
-
-            <!-- Beer Reviews Section -->
-            <h2 id="reviews">Beer Reviews</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-            <!-- Iframe wrapper: loads your Apps Script web app (beer sheet) -->
-            <div class="data-table iframe-wrapper">
-                <iframe id="beer-iframe"
-                        src="https://script.google.com/macros/s/AKfycbx-gr2oRU3KrWCB78RhgAU6NSYSlAYUte7dqAcxMnzHnWMhCicHT0A9waQ3W-M1aEU/exec?page=list&sheet=beer"
-                        title="Beer reviews"
-                        width="100%"
-                        height="500"
-                        frameborder="0"
-                        scrolling="no"></iframe>
-            </div>
-
-            <br>
 
             <!-- Cider Reviews Section -->
             <h2 id="cider">Cider Reviews</h2>
@@ -174,8 +154,6 @@
     if (iframe) iframe.style.height = (h + 20) + 'px';
   }, false);
 </script>
-
-<script src="js/table-loader.js"></script>
 
 </body>
 </html>
