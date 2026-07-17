@@ -1,188 +1,181 @@
-/* Basic Geocities-style CSS */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William's Reviews of Victorian Beer &amp; Cider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #cccccc;
-    color: #000000;
-    margin: 0;
-    padding: 10px;
-    line-height: 1.6;
-}
+<table border="0" width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td colspan="2" class="header">
+            <h1>William's Reviews of Victorian Beer &amp; Cider</h1>
+            <p><em>A personal guide to fine brews and ciders from Victoria, Australia</em></p>
+        </td>
+    </tr>
+</table>
 
-/* Header */
-.header {
-    background-color: #528E61;
-    color: #ffffff;
-    padding: 20px;
-    text-align: center;
-}
+<hr size="2" noshade>
 
-.header h1 {
-    margin: 0;
-    font-size: 28px;
-    font-weight: bold;
-}
+<table border="0" width="100%" cellpadding="10" cellspacing="0">
+    <tr>
+        <td width="20%" valign="top" class="sidebar">
+            <table border="1" width="100%" cellpadding="5" cellspacing="0">
+                <tr class="sidebar-header">
+                    <td><b>Navigation</b></td>
+                </tr>
+                <tr>
+                    <td><a href="#reviews">Beer Reviews</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#cider">Cider Reviews</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#breweries">Breweries</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#katescorner">Kate's Corner</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#about">About This Site</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#contact">Contact</a></td>
+                </tr>
+            </table>
 
-.header p {
-    margin: 5px 0 0 0;
-    font-size: 14px;
-}
+            <br>
 
-/* Content Area */
-.content {
-    padding: 10px;
-    background-color: #ffffff;
-}
+        </td>
 
-.content h2 {
-    color: #528E61;
-    font-size: 18px;
-    border-bottom: 2px solid #528E61;
-    padding-bottom: 5px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
+        <td width="80%" valign="top" class="content">
 
-.content p {
-    font-size: 14px;
-    text-align: justify;
-    margin-bottom: 10px;
-}
+            <!-- Beer Reviews Section -->
+            <h2 id="reviews">Beer Reviews</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-/* Sidebar */
-.sidebar {
-    padding: 10px;
-    background-color: #ffffcc;
-}
+            <!-- Iframe wrapper: loads your Apps Script web app (beer sheet) -->
+            <div class="data-table iframe-wrapper">
+                <iframe id="beer-iframe"
+                        src="https://script.google.com/macros/s/AKfycbx-gr2oRU3KrWCB78RhgAU6NSYSlAYUte7dqAcxMnzHnWMhCicHT0A9waQ3W-M1aEU/exec?page=list&sheet=beer"
+                        title="Beer reviews"
+                        width="100%"
+                        height="500"
+                        frameborder="0"
+                        scrolling="no"></iframe>
+            </div>
 
-.sidebar table {
-    background-color: #ffffcc;
-    border: 1px solid #000000;
-}
+            <br>
 
-.sidebar-header {
-    background-color: #ffff99;
-    color: #528E61;
-    font-weight: bold;
-}
+            <!-- Cider Reviews Section -->
+            <h2 id="cider">Cider Reviews</h2>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-.sidebar a {
-    color: #528E61;
-    text-decoration: underline;
-    font-size: 13px;
-}
+            <!-- Iframe wrapper: loads your Apps Script web app (cider sheet) -->
+            <div class="data-table iframe-wrapper">
+                <iframe id="cider-iframe"
+                        src="https://script.google.com/macros/s/AKfycbx-gr2oRU3KrWCB78RhgAU6NSYSlAYUte7dqAcxMnzHnWMhCicHT0A9waQ3W-M1aEU/exec?page=list&sheet=cider"
+                        title="Cider reviews"
+                        width="100%"
+                        height="500"
+                        frameborder="0"
+                        scrolling="no"></iframe>
+            </div>
 
-.sidebar a:visited {
-    color: #800080;
-}
+            <br>
 
-.sidebar a:hover {
-    background-color: #ffff99;
-}
+            <!-- Breweries Section -->
+            <h2 id="breweries">Featured Breweries</h2>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 
-/* Data Tables */
-.data-table {
-    background-color: #ffffff;
-    border: 1px solid #000000;
-    border-collapse: collapse;
-    width: 100%;
-    margin: 10px 0;
-}
+            <p><b>Example Brewery Co.</b><br>
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Located in the heart of Victoria, offering tours and tastings.</p>
 
-.data-table td {
-    padding: 8px;
-    border: 1px solid #000000;
-    font-size: 13px;
-}
+            <p><b>Lorem Brewing House</b><br>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. A traditional brewery with modern techniques.</p>
 
-.table-header {
-    background-color: #528E61;
-    color: #ffffff;
-    font-weight: bold;
-}
+            <p><b>Ipsum Cidery</b><br>
+            Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Premium ciders and apple wines.</p>
 
-.data-table tr:nth-child(even) {
-    background-color: #f0f0f0;
-}
+            <br>
 
-/* Image Cell Styling */
-.image-cell {
-    text-align: center;
-    padding: 8px;
-}
+            <!-- About Section -->
+            <h2 id="about">About This Site</h2>
+            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
 
-.entry-image {
-    max-width: 80px;
-    max-height: 80px;
-    border: 1px solid #cccccc;
-}
+            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam qua[...]</p>
 
-/* Form */
-form {
-    background-color: #ffffff;
-    padding: 10px;
-    border: 1px solid #cccccc;
-}
+            <br>
+                
+            <!-- Kate's Corner -->
+            <h2 id="katescorner">Kate's Corner</h2>
+            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
 
-input[type="text"],
-input[type="email"],
-textarea {
-    border: 1px solid #cccccc;
-    padding: 5px;
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-}
+            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam qua[...]</p>
 
-input[type="submit"],
-input[type="reset"] {
-    background-color: #528E61;
-    color: #ffffff;
-    padding: 5px 15px;
-    border: 1px outset #cccccc;
-    cursor: pointer;
-    font-weight: bold;
-    margin-right: 5px;
-}
+            <br>
 
-input[type="submit"]:active,
-input[type="reset"]:active {
-    border-style: inset;
-}
+            <!-- Contact Section -->
+            <h2 id="contact">Contact</h2>
+            <p>For questions or comments about this site, please use the form below:</p>
 
-/* Footer */
-.footer {
-    background-color: #528E61;
-    color: #ffffff;
-    text-align: center;
-    font-size: 12px;
-}
+            <form>
+                <p>
+                    <label>Name: <input type="text" name="name" size="30"></label>
+                </p>
+                <p>
+                    <label>Email: <input type="email" name="email" size="30"></label>
+                </p>
+                <p>
+                    <label>Message:<br>
+                    <textarea name="message" rows="5" cols="40"></textarea></label>
+                </p>
+                <p>
+                    <input type="submit" value="Send"> <input type="reset" value="Clear">
+                </p>
+            </form>
 
-.footer a {
-    color: #528E61;
-    text-decoration: underline;
-}
+            <br>
 
-.footer a:visited {
-    color: #ffcccc;
-}
+        </td>
+    </tr>
+</table>
 
-/* Links */
-a {
-    color: #528E61;
-    text-decoration: underline;
-}
+<hr size="2" noshade>
 
-a:visited {
-    color: #800080;
-}
+<table border="0" width="100%" cellpadding="10" cellspacing="0" class="footer">
+    <tr>
+        <td align="center">
+            <p><small>&copy; 2026 William's Reviews of Victorian Beer &amp; Cider. All rights reserved.</small></p>
+            <p><small>Last updated: June 30, 2026</small></p>
+            <p>
+                <small>
+                    <a href="#">Home</a> | 
+                    <a href="#">About</a> | 
+                    <a href="#">Disclaimer</a>
+                </small>
+            </p>
+        </td>
+    </tr>
+</table>
 
-a:hover {
-    background-color: #ffffcc;
-}
+<!-- Listener to accept iframe height messages and resize parent iframe -->
+<script>
+  window.addEventListener('message', function(e) {
+    // OPTIONAL: verify e.origin matches your Apps Script origin for extra safety
+    // if (e.origin !== 'https://script.google.com') return;
+    if (!e.data || e.data.type !== 'resize-iframe') return;
+    const id = e.data.id;
+    const h = parseInt(e.data.height, 10);
+    if (!id || !h) return;
+    const iframe = document.getElementById(id);
+    if (iframe) iframe.style.height = (h + 20) + 'px';
+  }, false);
+</script>
 
-/* Horizontal Rule */
-hr {
-    border: none;
-    height: 2px;
-    background-color: #528E61;
-}
+<script src="js/table-loader.js"></script>
+
+</body>
+</html>
