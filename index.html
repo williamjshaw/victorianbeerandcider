@@ -56,16 +56,11 @@
             <h2 id="reviews">Beer Reviews</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-            <table id="beer-table" border="1" width="100%" cellpadding="5" cellspacing="0" class="data-table">
-                <tr class="table-header">
-                    <td><b>Image</b></td>
-                    <td><b>Beer Name</b></td>
-                    <td><b>Brewery</b></td>
-                    <td><b>Style</b></td>
-                    <td><b>Label</b></td>
-                    <td><b>Rating</b></td>
-                </tr>
-            </table>
+            <!-- Replaced static beer table with an iframe that loads the web app list page. -->
+            <!-- Replace REPLACE_WITH_WEB_APP_URL with your Apps Script web app URL. The web app should serve the beer table/list. -->
+            <div id="beer-iframe-wrapper" class="data-table">
+                <iframe id="beer-iframe" src="REPLACE_WITH_WEB_APP_URL?page=list&sheet=beer" width="100%" height="500" style="border:0;"></iframe>
+            </div>
 
             <br>
 
@@ -73,17 +68,11 @@
             <h2 id="cider">Cider Reviews</h2>
             <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-            <table id="cider-table" border="1" width="100%" cellpadding="5" cellspacing="0" class="data-table">
-                <tr class="table-header">
-                    <td><b>Image</b></td>
-                    <td><b>Cider Name</b></td>
-                    <td><b>Producer</b></td>
-                    <td><b>Percentage</b></td>
-                    <td><b>Review</b></td>
-                    <td><b>Label</b></td>
-                    <td><b>Rating</b></td>
-                </tr>
-            </table>
+            <!-- Replaced static cider table with an iframe that loads the web app list page. -->
+            <!-- Replace REPLACE_WITH_WEB_APP_URL with your Apps Script web app URL. The web app should serve the cider table/list. -->
+            <div id="cider-iframe-wrapper" class="data-table">
+                <iframe id="cider-iframe" src="REPLACE_WITH_WEB_APP_URL?page=list&sheet=cider" width="100%" height="500" style="border:0;"></iframe>
+            </div>
 
             <br>
 
@@ -106,7 +95,7 @@
             <h2 id="about">About This Site</h2>
             <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
 
-            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat [...]
+            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam qua[...]</p>
 
             <br>
                 
@@ -114,7 +103,7 @@
             <h2 id="katescorner">Kate's Corner</h2>
             <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
 
-            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat [...]
+            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam qua[...]</p>
 
             <br>
 
