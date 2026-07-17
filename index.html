@@ -56,10 +56,15 @@
             <h2 id="reviews">Beer Reviews</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-            <!-- Replaced static beer table with an iframe that loads the web app list page. -->
-            <!-- Replace REPLACE_WITH_WEB_APP_URL with your Apps Script web app URL. The web app should serve the beer table/list. -->
-            <div id="beer-iframe-wrapper" class="data-table">
-                <iframe id="beer-iframe" src="REPLACE_WITH_WEB_APP_URL?page=list&sheet=beer" width="100%" height="500" style="border:0;"></iframe>
+            <!-- Iframe wrapper: loads your Apps Script web app (beer sheet) -->
+            <div class="data-table iframe-wrapper">
+                <iframe id="beer-iframe"
+                        src="https://script.google.com/macros/s/AKfycbx-gr2oRU3KrWCB78RhgAU6NSYSlAYUte7dqAcxMnzHnWMhCicHT0A9waQ3W-M1aEU/exec?page=list&sheet=beer"
+                        title="Beer reviews"
+                        width="100%"
+                        height="500"
+                        frameborder="0"
+                        scrolling="no"></iframe>
             </div>
 
             <br>
@@ -68,10 +73,15 @@
             <h2 id="cider">Cider Reviews</h2>
             <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-            <!-- Replaced static cider table with an iframe that loads the web app list page. -->
-            <!-- Replace REPLACE_WITH_WEB_APP_URL with your Apps Script web app URL. The web app should serve the cider table/list. -->
-            <div id="cider-iframe-wrapper" class="data-table">
-                <iframe id="cider-iframe" src="REPLACE_WITH_WEB_APP_URL?page=list&sheet=cider" width="100%" height="500" style="border:0;"></iframe>
+            <!-- Iframe wrapper: loads your Apps Script web app (cider sheet) -->
+            <div class="data-table iframe-wrapper">
+                <iframe id="cider-iframe"
+                        src="https://script.google.com/macros/s/AKfycbx-gr2oRU3KrWCB78RhgAU6NSYSlAYUte7dqAcxMnzHnWMhCicHT0A9waQ3W-M1aEU/exec?page=list&sheet=cider"
+                        title="Cider reviews"
+                        width="100%"
+                        height="500"
+                        frameborder="0"
+                        scrolling="no"></iframe>
             </div>
 
             <br>
@@ -150,6 +160,20 @@
         </td>
     </tr>
 </table>
+
+<!-- Listener to accept iframe height messages and resize parent iframe -->
+<script>
+  window.addEventListener('message', function(e) {
+    // OPTIONAL: verify e.origin matches your Apps Script origin for extra safety
+    // if (e.origin !== 'https://script.google.com') return;
+    if (!e.data || e.data.type !== 'resize-iframe') return;
+    const id = e.data.id;
+    const h = parseInt(e.data.height, 10);
+    if (!id || !h) return;
+    const iframe = document.getElementById(id);
+    if (iframe) iframe.style.height = (h + 20) + 'px';
+  }, false);
+</script>
 
 <script src="js/table-loader.js"></script>
 
