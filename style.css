@@ -1,216 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>William's Reviews of Victorian Beer &amp; Cider</title>
-    <link rel="stylesheet" href="style.css">
+/* Minimal colours & fonts only — do NOT change layout/spacing/behaviour. */
 
-    <style>
-      :root {
-        --brand-color: #528E61;
-        --brand-color-dark: #40784d;
-        --text-color: #222222;
-        --bg-color: #ffffff;
-      }
+:root {
+  --brand-color: #528E61;
+  --brand-color-dark: #40784d;
+  --text-color: #222222;
+  --bg-color: #ffffff;
+  --muted-bg: #ffffcc;
+}
 
-      /* Horizontal rule */
-      hr {
-        height: 2px;
-        border: 0;
-        background-color: var(--brand-color); /* #528E61 */
-        margin: 1.5rem 0;
-      }
+body {
+  /* fonts and base colours only */
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
 
-      /* Basic theme tie-ins */
-      a, .btn-primary {
-        color: var(--bg-color);
-        background-color: var(--brand-color);
-        text-decoration: none;
-        padding: .25rem .5rem;
-        border-radius: 3px;
-      }
-      a:hover, .btn-primary:hover {
-        background-color: var(--brand-color-dark);
-      }
+.header, .footer {
+  /* only colours */
+  background-color: var(--brand-color);
+  color: var(--bg-color);
+}
 
-      body {
-        color: var(--text-color);
-        background: var(--bg-color);
-        font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      }
-    </style>
-</head>
-<body>
+.sidebar {
+  background-color: var(--muted-bg);
+  color: var(--text-color);
+}
 
-<table border="0" width="100%" cellpadding="0" cellspacing="0">
-    <tr>
-        <td colspan="2" class="header">
-            <h1>William's Reviews of Victorian Beer &amp; Cider</h1>
-            <p><em>A personal guide to fine brews and ciders from Victoria, Australia</em></p>
-        </td>
-    </tr>
-</table>
+/* Links and simple controls: colours only */
+a, .btn-primary {
+  color: var(--bg-color);
+  background-color: var(--brand-color);
+  text-decoration: none;
+}
 
-<hr size="2" noshade>
+a:hover, .btn-primary:hover {
+  background-color: var(--brand-color-dark);
+}
 
-<table border="0" width="100%" cellpadding="10" cellspacing="0">
-    <tr>
-        <td width="20%" valign="top" class="sidebar">
-            <table border="1" width="100%" cellpadding="5" cellspacing="0">
-                <tr class="sidebar-header">
-                    <td><b>Navigation</b></td>
-                </tr>
-                <tr>
-                    <td><a href="#reviews">Beer Reviews</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#cider">Cider Reviews</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#breweries">Breweries</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#katescorner">Kate's Corner</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#about">About This Site</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#contact">Contact</a></td>
-                </tr>
-            </table>
+.content h2 {
+  color: var(--brand-color);
+}
 
-            <br>
+hr {
+  background-color: var(--brand-color);
+}
 
-        </td>
-
-        <td width="80%" valign="top" class="content">
-
-            <!-- Beer Reviews Section -->
-            <h2 id="reviews">Beer Reviews</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-            <!-- Iframe wrapper: loads your Apps Script web app (beer sheet) -->
-            <div class="data-table iframe-wrapper">
-                <iframe id="beer-iframe"
-                        src="https://script.google.com/macros/s/AKfycbx-gr2oRU3KrWCB78RhgAU6NSYSlAYUte7dqAcxMnzHnWMhCicHT0A9waQ3W-M1aEU/exec?page=list&sheet=beer"
-                        title="Beer reviews"
-                        width="100%"
-                        height="500"
-                        frameborder="0"
-                        scrolling="no"></iframe>
-            </div>
-
-            <br>
-
-            <!-- Cider Reviews Section -->
-            <h2 id="cider">Cider Reviews</h2>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-            <!-- Iframe wrapper: loads your Apps Script web app (cider sheet) -->
-            <div class="data-table iframe-wrapper">
-                <iframe id="cider-iframe"
-                        src="https://script.google.com/macros/s/AKfycbx-gr2oRU3KrWCB78RhgAU6NSYSlAYUte7dqAcxMnzHnWMhCicHT0A9waQ3W-M1aEU/exec?page=list&sheet=cider"
-                        title="Cider reviews"
-                        width="100%"
-                        height="500"
-                        frameborder="0"
-                        scrolling="no"></iframe>
-            </div>
-
-            <br>
-
-            <!-- Breweries Section -->
-            <h2 id="breweries">Featured Breweries</h2>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-
-            <p><b>Example Brewery Co.</b><br>
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Located in the heart of Victoria, offering tours and tastings.</p>
-
-            <p><b>Lorem Brewing House</b><br>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. A traditional brewery with modern techniques.</p>
-
-            <p><b>Ipsum Cidery</b><br>
-            Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Premium ciders and apple wines.</p>
-
-            <br>
-
-            <!-- About Section -->
-            <h2 id="about">About This Site</h2>
-            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-
-            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam qua[...]
-
-            <br>
-                
-            <!-- Kate's Corner -->
-            <h2 id="katescorner">Kate's Corner</h2>
-            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-
-            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam qua[...]
-
-            <br>
-
-            <!-- Contact Section -->
-            <h2 id="contact">Contact</h2>
-            <p>For questions or comments about this site, please use the form below:</p>
-
-            <form>
-                <p>
-                    <label>Name: <input type="text" name="name" size="30"></label>
-                </p>
-                <p>
-                    <label>Email: <input type="email" name="email" size="30"></label>
-                </p>
-                <p>
-                    <label>Message:<br>
-                    <textarea name="message" rows="5" cols="40"></textarea></label>
-                </p>
-                <p>
-                    <input type="submit" value="Send"> <input type="reset" value="Clear">
-                </p>
-            </form>
-
-            <br>
-
-        </td>
-    </tr>
-</table>
-
-<hr size="2" noshade>
-
-<table border="0" width="100%" cellpadding="10" cellspacing="0" class="footer">
-    <tr>
-        <td align="center">
-            <p><small>&copy; 2026 William's Reviews of Victorian Beer &amp; Cider. All rights reserved.</small></p>
-            <p><small>Last updated: June 30, 2026</small></p>
-            <p>
-                <small>
-                    <a href="#">Home</a> | 
-                    <a href="#">About</a> | 
-                    <a href="#">Disclaimer</a>
-                </small>
-            </p>
-        </td>
-    </tr>
-</table>
-
-<!-- Listener to accept iframe height messages and resize parent iframe -->
-<script>
-  window.addEventListener('message', function(e) {
-    // OPTIONAL: verify e.origin matches your Apps Script origin for extra safety
-    // if (e.origin !== 'https://script.google.com') return;
-    if (!e.data || e.data.type !== 'resize-iframe') return;
-    const id = e.data.id;
-    const h = parseInt(e.data.height, 10);
-    if (!id || !h) return;
-    const iframe = document.getElementById(id);
-    if (iframe) iframe.style.height = (h + 20) + 'px';
-  }, false);
-</script>
-
-<script src="js/table-loader.js"></script>
-
-</body>
-</html>
+/* keep visited/hover link colours minimal changes only */
+.sidebar a { color: var(--brand-color); }
+.sidebar a:visited { color: #800080; }
+.footer a { color: var(--bg-color); }
