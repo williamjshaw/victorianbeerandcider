@@ -5,6 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>William's Reviews of Victorian Beer &amp; Cider</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+      :root {
+        --brand-color: #528E61;
+        --brand-color-dark: #40784d;
+        --text-color: #222222;
+        --bg-color: #ffffff;
+      }
+
+      /* Horizontal rule */
+      hr {
+        height: 2px;
+        border: 0;
+        background-color: var(--brand-color); /* #528E61 */
+        margin: 1.5rem 0;
+      }
+
+      /* Basic theme tie-ins */
+      a, .btn-primary {
+        color: var(--bg-color);
+        background-color: var(--brand-color);
+        text-decoration: none;
+        padding: .25rem .5rem;
+        border-radius: 3px;
+      }
+      a:hover, .btn-primary:hover {
+        background-color: var(--brand-color-dark);
+      }
+
+      body {
+        color: var(--text-color);
+        background: var(--bg-color);
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      }
+    </style>
 </head>
 <body>
 
@@ -105,7 +140,7 @@
             <h2 id="about">About This Site</h2>
             <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
 
-            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam qua[...]</p>
+            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam qua[...]
 
             <br>
                 
@@ -113,7 +148,7 @@
             <h2 id="katescorner">Kate's Corner</h2>
             <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
 
-            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam qua[...]</p>
+            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam qua[...]
 
             <br>
 
